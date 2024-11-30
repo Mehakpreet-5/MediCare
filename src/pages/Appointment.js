@@ -21,7 +21,7 @@ const Appointments = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const response = await fetch('/api/book'); // Ensure this is the correct endpoint
+        const response = await fetch('http://localhost:5000/api/bookings');// Ensure this is the correct endpoint
         const data = await response.json();
         if (response.ok) {
           const appointmentsWithIds = data.map(appointment => ({
@@ -54,7 +54,7 @@ const Appointments = () => {
 
   const handleCancel = async (id) => {
     try {
-      await fetch(`/api/book?id=${id}`, {
+      await fetch(`http://localhost:5000/api/bookings?id=${id}`, {
         method: 'DELETE',
       });
 
@@ -145,8 +145,8 @@ const Appointments = () => {
                           <th className='py-2 px-4 '>Action</th>                      </tr>
                     </thead>
                     <tbody>
-                      {filteredAppointments.map((appointment, index) => (
-                        <tr key={index} className='hover:bg-gray-100 hover:bg-op'>
+                      {filteredAppointments.map((appointment) => (
+                        <tr key={appointment._id} className='hover:bg-gray-100 hover:bg-op'>
                           <td className='py-2 px-4 mr-10 ml-5 '>{appointment.doctor.name}</td>
                           <td className='py-2 px-4 hidden sm:block'>{appointment.doctor.specialization}</td>
                           <td className='py-2 px-4 '>{new Date(appointment.date).toLocaleDateString()}</td>

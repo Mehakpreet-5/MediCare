@@ -63,7 +63,7 @@
 
 
 // pages/admin/index.js
-import dbConnect from '../../db';
+// import dbConnect from '../../db';
 // import Appointment from '../../models/Appointment';
 import Sidebar from './sidebar';
 import { useEffect } from 'react';
@@ -86,7 +86,7 @@ const AdminDashboard = ({ appointments }) => {
       <Sidebar />
       <div className="flex-1 p-6">
         <h1 className="text-3xl font-bold mb-4 text-center">Admin Dashboard</h1>
-        <div className="overflow-x-auto bg-white rounded-lg shadow-md">
+        {/* <div className="overflow-x-auto bg-white rounded-lg shadow-md">
           <table className="min-w-full bg-white">
             <thead>
               <tr className="bg-blue-500 text-white">
@@ -115,19 +115,19 @@ const AdminDashboard = ({ appointments }) => {
               )}
             </tbody>
           </table>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
-export async function getServerSideProps() {
-  await dbConnect();
+// export async function getServerSideProps() {
+//   // await dbConnect();
   
-  const appointments = await Appointment.find({}).lean();
-  return {
-    props: { appointments: JSON.parse(JSON.stringify(appointments)) },
-  };
-}
+//   const appointments = await Appointment.find({}).lean();
+//   return {
+//     props: { appointments: JSON.parse(JSON.stringify(appointments)) },
+//   };
+// }
 
 export default AdminDashboard;

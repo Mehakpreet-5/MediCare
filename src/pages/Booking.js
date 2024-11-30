@@ -191,7 +191,7 @@ function Booking() {
         };
 
         try {
-            const response = await fetch('/api/appoint', {
+            const response = await fetch('http://localhost:5000/api/appoint', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

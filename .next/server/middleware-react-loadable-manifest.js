@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"pages\\\\meet\\\\[id].js -> @zegocloud/zego-uikit-prebuilt":{"id":2236,"files":["static/chunks/fdd8909d.6c1fc78139e2eea4.js","static/chunks/454.15d266ed3eca9be3.js"]}}';

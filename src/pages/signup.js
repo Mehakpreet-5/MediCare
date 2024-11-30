@@ -138,7 +138,7 @@ const SignupForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('/api/signup', {
+      const response = await fetch('http://localhost:5000/api/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
