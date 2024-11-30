@@ -181,7 +181,7 @@ const Faqs = () => {
       </div>
 
       <div className="container mx-auto px-6 md:px-16 lg:px-32 mt-16  mb-40" data-aos="fade-up">
-        <dl className="grid gap-8 md:grid-cols-2 lg:gap-12 w-11/12 ml-10">
+        <dl className="grid gap-8 md:grid-cols-2 lg:gap-12 w-11/12 lg:ml-10 ml-5">
           {faqsData.map((faq, index) => (
             <div
               key={index}

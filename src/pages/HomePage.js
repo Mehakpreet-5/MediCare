@@ -16,19 +16,19 @@ function Home() {
     <>
       <div className='flex flex-col lg:flex-row lg:h-5/6 greenn'>
         {/* Animate Icon */}
-        <Image src={icon2}  alt="A friendly doctor background image"  className="relative w-28 h-28 opacity-50 ml-10 mt-10" data-aos="zoom-in"  data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
+        <Image src={icon2}  alt="A friendly doctor background image"  className="relative w-16 h-20 lg:w-28 lg:h-28 opacity-50  ml-2 lg:ml-10 mt-10" data-aos="zoom-in"  data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
         
-        <div className='flex flex-col lg:flex-row space-x-20 mt-7 ml-10 mr-1 pb-10 md:pb-0'>
+        <div className='flex flex-col lg:flex-row lg:space-x-20 px-4 lg:px-0 lg:mt-7 lg:ml-10 mr-1 pb-10 md:pb-0'>
           <div className='flex flex-col items-center justify-center pt-0 md:pt-20 lg:pt-20 px-4 w-full lg:w-4/6'>
             {/* Hero Section */}
             <header className="bg-center mt-0 md:mt-16 lg:mt-16 h-full" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
               <h1 className="text-4xl md:text-5xl text-orange-300 text-center lg:text-left">Take the best quality Treatment</h1>
-              <p className="mt-4 text-md md:text-base text-gray-400 mr-7 text-center lg:text-left">
+              <p className="mt-4 text-md md:text-base text-gray-400 lg:mr-7 text-center lg:text-left">
                 Your health is our priority. Our goal is to deliver the highest quality healthcare services. We believe that everyone deserves access to excellent medical care without compromising on quality.
               </p>
 
               <Link href="/Doctors">
-                <button className="mt-8 ml-32 md:ml-0 lg:ml-0 border-2 border-orange-300 text-orange-300 py-2 px-6 rounded-full hover:bg-yellow-200 hover:text-green-950 transition">
+                <button className="mt-8 ml-24 md:ml-0 lg:ml-0 border-2 border-orange-300 text-orange-300 py-2 px-4 lg:px-6 rounded-full hover:bg-yellow-200 hover:text-green-950 transition">
                   Book Now <FontAwesomeIcon icon={faArrowRight} className='ml-2' />
                 </button>
               </Link>

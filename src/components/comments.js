@@ -38,10 +38,10 @@ const Comments = () => {
         <div className='relative mb-24'>
             <div className='absolute inset-0 greenn h-80 shadow-lg' />
 
-            <div className='relative z-10 w-8/12 p-10 pt-20 mx-auto'>
+            <div className='relative z-10 lg:w-8/12 p-10 pt-20 mx-auto'>
             <div data-aos="zoom-in"  data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-duration="700">
                 <h3 className='text-2xl font-serif  text-orange-300 mb-3' >Testimonial</h3>
-                <h1 className="text-4xl font-serif  text-white mb-6">What Patients Say About Us.</h1> </div>
+                <h1 className="text-3xl lg:text-4xl font-serif  text-white mb-6">What Patients Say About Us.</h1> </div>
                 <div className="overflow-hidden mt-12 " data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="900">
                     <div
                         className={`flex transition-transform duration-500`}
@@ -51,7 +51,7 @@ const Comments = () => {
                         {commentData.map((comment) => (
                             <div
                                 key={comment.id}
-                                className="min-w-[290px] px-6 h-56 mr-3 bg-white shadow-lg rounded-lg border border-orange-300 mx-2 flex flex-col justify-center transition-transform duration-300 transform hover:scale-105"
+                                className=" min-w-[200px]  lg:min-w-[290px] px-6 h-56 mr-3 bg-white shadow-lg rounded-lg border border-orange-300 mx-2 flex flex-col justify-center transition-transform duration-300 transform hover:scale-105"
                             >
                                 <h2 className="text-3xl font-semibold text-gray-800">{comment.name}</h2>
                                 <div className="flex mt-1 mb-2">{renderStars(comment.rating)}</div> {/* Display rating here */}

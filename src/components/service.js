@@ -43,23 +43,23 @@ const ServicePage = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative bg-white border border-green-900 shadow-md px-8 pt-6 h-56 w-full md:w-80 group overflow-hidden"
+            className="relative bg-white border border-green-900 shadow-md px-8 pt-6 h-48 lg:h-56 w-full md:w-80 group overflow-hidden"
             data-aos="fade-up" 
             data-aos-delay="500" 
             data-aos-easing="ease-in-out" 
             data-aos-duration="700"
           >
             {/* Background Overlay */}
-            <div className="absolute inset-0 bg-orange-300 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out"></div>
+            <div className="absolute inset-0 bg-orange-500 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out"></div>
 
             {/* Content */}
-            <div className="relative z-10">
-              <FontAwesomeIcon
+            <div className="relative z-10 flex flex-row lg:flex-col">
+             <div> <FontAwesomeIcon
                 icon={service.icon}
-                className="text-orange-300 text-5xl mb-4 group-hover:text-white transition duration-300 ease-in-out"
-              />
-              <h2 className="text-lg font-bold mb-2">{service.name}</h2>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+                className="text-orange-300 mt-6 lg:mt-0 text-7xl lg:text-5xl mb-4 group-hover:text-white transition duration-300 ease-in-out"
+              /> </div>
+             <div className="ml-5  lg:ml-0 mt-3  lg:mt-0"> <h2 className="text-2xl font-semibold mb-2">{service.name}</h2>
+              <p className="text-gray-600 mb-4">{service.description}</p> </div>
             </div>
           </div>
         ))}

@@ -94,34 +94,34 @@ const Appointments = () => {
             </div>
           </div>
 
-          <Image src={icon2} alt="Description of the image" className="absolute inset-0 w-36 h-32 opacity-50 md:ml-16 mt-28" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
+          <Image src={icon2} alt="Description of the image" className="absolute inset-0 w-28 lg:w-36 lg:h-32 opacity-50 md:ml-16 mt-28" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
 
-          <div className='mt-48 ml-20 md:ml-52 py-10 absolute inset-0'
+          <div className='mt-48 lg:ml-20 ml-10 md:ml-52 py-10 absolute inset-0'
             data-aos="fade-down" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1100">
 
             {!showAppointments ? (
-              <form onSubmit={handleMobileSubmit} className="mb-8 w-3/4">
-                <h1 className="mb-5 fontt text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-serif orangg-text">
+              <form onSubmit={handleMobileSubmit} className="mb-8 lg:w-3/4">
+                <h1 className="mb-5 fontt text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-serif orangg-text">
                   Check Appointment
                 </h1>
                 <h1 className="mb-8 fontt text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-serif text-gray-300">
                   Enter Your Number
                 </h1>
-                <div className="bg-white bg-opacity-20 p-3 rounded-lg shadow-lg flex space-x-3 w-96">
+                <div className="bg-white bg-opacity-20 p-3 rounded-lg shadow-lg flex space-x-3 w-80">
                   <input
                     type="tel"
                     value={mobileNumber}
                     onChange={(e) => setMobileNumber(e.target.value)}
                     placeholder="Mobile Number"
-                    className="border border-gray-300 rounded-l-lg p-3 w-full sm:w-80 md:w-96 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="border border-gray-300 rounded-l-lg p-3 w-72 md:w-96 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
 
                 <div className="relative mt-7 ">
-                  <Image src={SubmitImg} alt="Submit" className="h-11 md:h-11 w-48 ml-24 object-cover" />
+                  <Image src={SubmitImg} alt="Submit" className="h-11 md:h-11 w-48  ml-16 lg:ml-24 object-cover" />
                   <button
-                    className="absolute inset-0 md:mr-96 md:pr-60 ml-14 md:ml-7 text-white font-bold text-lg md:text-xl"
+                    className="absolute inset-0 mr-5 md:mr-96 md:pr-60 ml-1 md:ml-7 text-white font-bold text-lg md:text-xl"
                     type="submit"
                   >
                     Submit

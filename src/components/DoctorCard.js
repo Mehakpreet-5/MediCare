@@ -16,11 +16,11 @@ function Doctors() {
   const selectedCategoryData = doctorData.find(category => category.category === selectedCategory);
 
   return (
-    <div className="p-10 bg-orange-200 bg-opacity-20">
+    <div className="lg:p-10 bg-orange-200 bg-opacity-20">
 
-      <div className="flex flex-wrap justify-center space-x-8 mb-8" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="700">
+      <div className="lg:flex lg:flex-row grid grid-cols-2 justify-center space-y-2 space-x-8 mb-8 p-10" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="700">
         {doctorData.map((categoryData, index) => (
-          <div key={index} className="flex flex-col items-center">
+          <div key={index} className="flex flex-col items-center ">
             <div
               className={`text-2xl font-semibold cursor-pointer transition duration-300 ease-in-out border
                border-gray-600 rounded-full px-2 lg:py-2 text-center w-24 h-20 bg-gradient-to-r from-cyan-100 to-white mb-2
@@ -42,48 +42,72 @@ function Doctors() {
       </div>
 
       {selectedCategoryData && (
-        <div className="mt-20 px-4 md:px-14 mb-10 ml-10" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1200">
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {selectedCategoryData.doctors.map((doctor, docIndex) => (
-              <li key={docIndex} className="bg-white bg-opacity-35 w-full sm:w-96 p-6 rounded-lg shadow-md">
-                <div className="flex items-center space-x-4">
-                  <Image
-                    src={doctor.image || '/default-doctor-image.jpg'}
-                    alt={doctor.name}
-                    width={100}
-                    height={100}
-                    className="w-24 h-24 rounded-full object-cover border-2 border-yellow-500"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-800">{doctor.name}</h3>
-                    <p>Specialization: {doctor.specialization}</p>
-                    <p>Experience: {doctor.experience}</p>
-                    <p>Availability: {doctor.availability}</p>
-                  </div>
-                  <Link
-                    href={{
-                      pathname: '/Booking',
-                      query: {
-                        doctorImg : doctor.image,
-                        doctorName: doctor.name,
-                        specialization: doctor.specialization,
-                        experience: doctor.experience,
-                        availability: doctor.availability,
-                      }
-                    }}
-                  >
-                    <h2
-                      className='rounded-full border border-gray-500 px-2 mt-28 bg-yellow-50 hover:bg-yellow-100 cursor-pointer 
-                      active:bg-yellow-300 active:scale-95'
+      <div
+      className="mt-20 px-4 md:px-14 mb-10 lg:ml-10"
+      data-aos="fade-up"
+      data-aos-delay="200"
+      data-aos-easing="ease-in-out"
+      data-aos-duration="1200"
+    >
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        {selectedCategoryData.doctors.map((doctor, docIndex) => (
+          <li
+            key={docIndex}
+            className="bg-white bg-opacity-90  min-w-80 lg:max-w-md p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="flex lg:flex-row  lg:items-center lg:space-x-6 space-y-4 lg:space-y-0">
+              <Image
+                src={doctor.image || '/default-doctor-image.jpg'}
+                alt={doctor.name}
+                width={120}
+                height={120}
+                className="w-32 h-40 lg:w-36 lg:h-44 rounded-lg object-cover shadow-md"
+              />
+              <div className="flex-1 ml-5 lg:ml-0 lg:text-left">
+                <h3 className="text-lg lg:text-xl font-semibold text-gray-800">
+                  {doctor.name}
+                </h3>
+                <p className="text-sm lg:text-base text-gray-600 mt-1">
+                  <strong>Specialization:</strong> {doctor.specialization}
+                </p>
+                <p className="text-sm lg:text-base text-gray-600">
+                  <strong>Experience:</strong> {doctor.experience}
+                </p>
+                <p className="text-sm lg:text-base text-gray-600">
+                  <strong>Availability:</strong> {doctor.availability}
+                </p>
+              </div>
+              <Link
+                href={{
+                  pathname: '/Booking',
+                  query: {
+                    doctorImg: doctor.image,
+                    doctorName: doctor.name,
+                    specialization: doctor.specialization,
+                    experience: doctor.experience,
+                    availability: doctor.availability,
+                  },
+                }}
+              >
+                  <h2
+                      className='rounded-full border border-gray-500 px-2  mt-28  lg:mt-40 bg-yellow-50 hover:bg-yellow-100 cursor-pointer 
+                      active:bg-yellow-300 active:scale-95 text-2xl pb-1'
                     >
                       +
                     </h2>
-                  </Link>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+                {/* <button
+                  className="mt-4 lg:mt-40 bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-4 py-2 rounded-full shadow-md 
+                  transform active:scale-95 transition duration-150"
+                >
+                  Book
+                </button> */}
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+    
       )}
     </div>
   );
